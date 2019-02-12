@@ -1,7 +1,7 @@
 # Polyshim
 
 [![NPM version](http://img.shields.io/npm/v/polyshim.svg?style=flat)](https://www.npmjs.org/package/polyshim)
-[![Build Status](https://img.shields.io/travis/paulzi/oopify/master.svg)](https://travis-ci.org/paulzi/polyshim)
+[![Build Status](https://img.shields.io/travis/paulzi/polyshim/master.svg)](https://travis-ci.org/paulzi/polyshim)
 [![Downloads](https://img.shields.io/npm/dt/polyshim.svg)](https://www.npmjs.org/package/polyshim)
 ![License](https://img.shields.io/npm/l/express.svg)
 
