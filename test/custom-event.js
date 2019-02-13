@@ -71,6 +71,7 @@ describe("CustomEvent tests", function() {
         document.addEventListener('custom', documentHandler);
         let event = new CustomEvent('custom', { bubbles: true, cancelable: true });
         link.dispatchEvent(event);
+        assert.isTrue(event.defaultPrevented);
         document.removeEventListener('custom', documentHandler);
         link.removeEventListener('custom', linkHandler);
         assert.isTrue(pass);

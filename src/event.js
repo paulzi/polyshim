@@ -17,6 +17,17 @@ export default function() {
             params = params || {bubbles: false, cancelable: false};
             let event = document.createEvent('Event');
             event.initEvent(type, params.bubbles, params.cancelable);
+            event.preventDefault = function() {
+                // fix ie forget defaultPrevented after dispatchEvent cycle
+                Orig.prototype.preventDefault.apply(this);
+                if (this.cancelable) {
+                    try {
+                        Object.defineProperty(this, 'defaultPrevented', {configurable: true, get: () => true});
+                    } catch (e) {
+                        // to do nothing
+                    }
+                }
+            };
             return event;
         };
 

@@ -1,6 +1,6 @@
 {
   "name": "polyshim",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DOM and ECMAScript polyfills",
   "main": "dist/polyfills.js",
   "module": "src/polyfills.js",

@@ -18,6 +18,17 @@ export default function() {
             params = params || { bubbles: false, cancelable: false };
             let event = document.createEvent('CustomEvent');
             event.initCustomEvent(type, params.bubbles, params.cancelable, params.detail);
+            event.preventDefault = function() {
+                // fix ie forget defaultPrevented after dispatchEvent cycle
+                proto.preventDefault.apply(this);
+                if (this.cancelable) {
+                    try {
+                        Object.defineProperty(this, 'defaultPrevented', {configurable: true, get: () => true});
+                    } catch (e) {
+                        // to do nothing
+                    }
+                }
+            };
             return event;
         };
 

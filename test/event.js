@@ -71,6 +71,7 @@ describe("event tests", function() {
         document.addEventListener('click', documentHandler);
         let event = new Event('click', { bubbles: true, cancelable: true });
         link.dispatchEvent(event);
+        assert.isTrue(event.defaultPrevented);
         document.removeEventListener('click', documentHandler);
         link.removeEventListener('click', linkHandler);
         assert.isTrue(pass);
