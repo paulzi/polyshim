@@ -41,6 +41,15 @@ let item = document.querySelector('.component .component__item');
 let component = closest.call(item, '.component');
 ```
 
+## Список полифилов
+
+- Object.assign
+- Element.prototype.matches
+- Element.prototype.closest
+- DOMTokenList.prototype.toggle (параметр force)
+- Event (конструктор)
+- CustomEvent (конструктор)
+
 ## Тестирование
 
 Для запуска тестов используйте:

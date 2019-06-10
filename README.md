@@ -41,6 +41,15 @@ let item = document.querySelector('.component .component__item');
 let component = closest.call(item, '.component');
 ```
 
+## Polyfill list
+
+- Object.assign
+- Element.prototype.matches
+- Element.prototype.closest
+- DOMTokenList.prototype.toggle (force parameter)
+- Event (constructor)
+- CustomEvent (constructor)
+
 ## Testing
 
 To run tests, use:
